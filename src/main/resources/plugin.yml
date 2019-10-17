@@ -1,0 +1,5 @@
+name: SSU
+version: 1.0.1
+author: Sam Mauldin
+main: me.mauldin.mc.SSU.SSU
+api-version: "1.14"
