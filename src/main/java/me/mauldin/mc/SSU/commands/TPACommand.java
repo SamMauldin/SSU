@@ -59,7 +59,10 @@ public class TPACommand implements CommandExecutor {
             requestMap.put(targetUUID, senderUUID);
 
             sender.sendMessage(String.format("%sRequest sent to %s%s!", ChatColor.GREEN, targetPlayer.getDisplayName(), ChatColor.GREEN));
-            targetPlayer.sendMessage(String.format("%sYou have a teleport request from %s%s! Type '/tpaccept' to accept.", ChatColor.AQUA, senderPlayer.getDisplayName(), ChatColor.AQUA));
+
+            String senderDisplayName = senderPlayer.getDisplayName();
+            boolean targetIsBot = targetUUID.equals(UUID.fromString("b0e5f122-cd4a-4175-a2e5-78d755e7edb2"));
+            targetPlayer.sendMessage(String.format("%sYou have a teleport request from %s%s! Type '/tpaccept' to accept.", ChatColor.AQUA, targetIsBot ? sender.getName() : senderDisplayName, ChatColor.AQUA));
 
             return true;
         } else if (cmd.getName().equalsIgnoreCase("tpaccept")) {
