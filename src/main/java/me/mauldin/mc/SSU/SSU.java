@@ -1,5 +1,6 @@
 package me.mauldin.mc.SSU;
 
+import me.mauldin.mc.SSU.commands.TPACommand;
 import me.mauldin.mc.SSU.listeners.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -15,6 +16,11 @@ public class SSU extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PhantomRemover(), this);
         getServer().getPluginManager().registerEvents(new MOTDRandomizer(), this);
         getServer().getPluginManager().registerEvents(new PlayerListInfo(), this);
+
+        // Register all commands
+        TPACommand tpacommand = new TPACommand();
+        this.getCommand("tpa").setExecutor(tpacommand);
+        this.getCommand("tpaccept").setExecutor(tpacommand);
     }
 
     @Override

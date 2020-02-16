@@ -1,5 +1,23 @@
 name: SSU
-version: 1.0.1
+version: 1.1.2
 author: Sam Mauldin
 main: me.mauldin.mc.SSU.SSU
-api-version: "1.14"
+api-version: "1.15"
+commands:
+  tpa:
+    description: TP Request
+    usage: /<command> [player]
+    permission: ssu.tpa
+    permission-message: You do not have permission to use this command!
+  tpaccept:
+    description: Accept TP Request
+    usage: /<command>
+    permission: ssu.tpaccept
+    permission-message: You do not have permission to use this command!
+permissions:
+  ssu.tpa:
+    description: Allows use of the tpa command
+    default: true
+  ssu.tpaccept:
+    description: Allows use of the tpaccept command
+    default: true

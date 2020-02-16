@@ -39,7 +39,12 @@ public class MOTDRandomizer implements Listener {
                 "got the green top",
                 "It is inevitable.",
                 "2b2t is full",
-                "water > pepsi > coke"
+                "water > pepsi > coke",
+                "going to college in 2020",
+                "just kidding... unless?",
+                "minecraft in 2020",
+                "block facts will return next week",
+                "block fact 6: blocks are made out of smaller blocks"
         };
 
         Random rand = new Random();
