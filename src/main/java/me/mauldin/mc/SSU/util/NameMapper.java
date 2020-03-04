@@ -4,7 +4,10 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.UUID;
+
+import static org.bukkit.Bukkit.getServer;
 
 // Store and retrieve nicknames
 
@@ -25,5 +28,14 @@ public class NameMapper {
         } else {
             return pl.getName();
         }
+    }
+
+    public static Player resolveOnlinePlayer(String name) {
+        Player serverMatch = getServer().getPlayer(name);
+        if (serverMatch != null) return serverMatch;
+        for (Player player : getServer().getOnlinePlayers()) {
+            if (player.getDisplayName().toLowerCase().contains(name.toLowerCase())) return player;
+        }
+        return null;
     }
 }

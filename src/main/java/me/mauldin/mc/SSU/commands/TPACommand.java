@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import java.util.HashMap;
 import java.util.UUID;
 
+import static me.mauldin.mc.SSU.util.NameMapper.resolveOnlinePlayer;
 import static org.bukkit.Bukkit.getServer;
 
 public class TPACommand implements CommandExecutor {
@@ -33,8 +34,7 @@ public class TPACommand implements CommandExecutor {
         if (cmd.getName().equalsIgnoreCase("tpa")) {
             if (args.length != 1) return false;
 
-            String targetPlayerName = args[0].toLowerCase().equals("sam") ? "Sxw" : args[0];
-            Player targetPlayer = getServer().getPlayer(targetPlayerName);
+            Player targetPlayer = resolveOnlinePlayer(args[0]);
 
             if (targetPlayer == null) {
                 sender.sendMessage(String.format("%sCould not find target player!", ChatColor.RED));
@@ -60,20 +60,33 @@ public class TPACommand implements CommandExecutor {
 
             sender.sendMessage(String.format("%sRequest sent to %s%s!", ChatColor.GREEN, targetPlayer.getDisplayName(), ChatColor.GREEN));
 
-            String senderDisplayName = senderPlayer.getDisplayName();
             boolean targetIsBot = targetUUID.equals(UUID.fromString("b0e5f122-cd4a-4175-a2e5-78d755e7edb2"));
-            targetPlayer.sendMessage(String.format("%sYou have a teleport request from %s%s! Type '/tpaccept' to accept.", ChatColor.AQUA, targetIsBot ? sender.getName() : senderDisplayName, ChatColor.AQUA));
+            String senderDisplayName = targetIsBot ? senderPlayer.getName() : senderPlayer.getDisplayName();
+            targetPlayer.sendMessage(String.format("%sYou have a teleport request from %s%s! Type '/tpaccept %s%s' to accept.", ChatColor.AQUA, senderDisplayName,  ChatColor.AQUA, senderDisplayName, ChatColor.AQUA));
 
             return true;
         } else if (cmd.getName().equalsIgnoreCase("tpaccept")) {
-            if (args.length != 0) return false;
+            if (args.length != 1) return false;
 
             if (requestMap.containsKey(senderUUID)) {
                 UUID teleportUUID = requestMap.get(senderUUID);
+
+                Player targetPlayer = resolveOnlinePlayer(args[0]);
+
+                if (targetPlayer == null) {
+                    sender.sendMessage(String.format("%sCould not find target player!", ChatColor.RED));
+                    return true;
+                }
+
+                if (!targetPlayer.getUniqueId().equals(teleportUUID)) {
+                    sender.sendMessage(String.format("%sCould not find teleport request from %s%s!", ChatColor.RED, targetPlayer.getDisplayName(), ChatColor.RED));
+                    return true;
+                }
+
                 Player teleportPlayer = getServer().getPlayer(teleportUUID);
 
                 if (teleportPlayer == null) {
-                    sender.sendMessage(String.format("%sYou have no teleport requests to accept!", ChatColor.RED));
+                    sender.sendMessage(String.format("%sCould not find target player!", ChatColor.RED));
                     return true;
                 }
 

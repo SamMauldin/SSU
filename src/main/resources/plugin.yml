@@ -11,7 +11,7 @@ commands:
     permission-message: You do not have permission to use this command!
   tpaccept:
     description: Accept TP Request
-    usage: /<command>
+    usage: /<command> [player]
     permission: ssu.tpaccept
     permission-message: You do not have permission to use this command!
 permissions:
