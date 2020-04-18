@@ -7,14 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caf2ce58-3269-44db-8a21-e6b876a6f6a0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_destroystokyo_paper_paper_api_1_15_2_R0_1_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_destroystokyo_paper_paper_api_1_15_2_R0_1_SNAPSHOT.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_15_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_md_5_bungeecord_chat_1_15_SNAPSHOT.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/mauldin/mc/SSU/listeners/NetherTunnelSpawnBlocker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SSU.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SSU.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/mauldin/mc/SSU/commands/TPACommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/mauldin/mc/SSU/commands/TPACommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/mauldin/mc/SSU/listeners/ChatFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/mauldin/mc/SSU/listeners/ChatFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/mauldin/mc/SSU/SSU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/mauldin/mc/SSU/SSU.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +50,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last.edited.regexp" value="Sample Text" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -102,14 +98,22 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="575" y="303" key="#com.intellij.ide.util.MemberChooser/0.23.1792.1097@0.23.1792.1097" timestamp="1579997169619" />
+    <state x="428" y="217" key="Maven.ArtifactSearchDialog" timestamp="1583307884836">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="428" y="217" key="Maven.ArtifactSearchDialog/0.23.1792.1097@0.23.1792.1097" timestamp="1583307884836" />
     <state x="545" y="504" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579997641015">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="545" y="504" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1792.1097@0.23.1792.1097" timestamp="1579997641015" />
-    <state x="610" y="382" width="958" height="874" key="search.everywhere.popup" timestamp="1581809095189">
+    <state x="757" y="290" key="run.anything.popup" timestamp="1583305611513">
+      <screen x="0" y="23" width="1792" height="1097" />
+    </state>
+    <state x="757" y="290" key="run.anything.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1583305611513" />
+    <state x="610" y="382" width="958" height="874" key="search.everywhere.popup" timestamp="1583293437639">
       <screen x="0" y="23" width="2560" height="1417" />
     </state>
     <state x="427" y="301" width="670" height="676" key="search.everywhere.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1579997522681" />
-    <state x="610" y="382" width="958" height="874" key="search.everywhere.popup/408.1463.1792.1097/0.23.2560.1417@0.23.2560.1417" timestamp="1581809095189" />
+    <state x="610" y="382" width="958" height="874" key="search.everywhere.popup/408.1463.1792.1097/0.23.2560.1417@0.23.2560.1417" timestamp="1583293437639" />
   </component>
 </project>

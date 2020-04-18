@@ -18,6 +18,7 @@ public class SSU extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PhantomRemover(), this);
         getServer().getPluginManager().registerEvents(new MOTDRandomizer(), this);
         getServer().getPluginManager().registerEvents(new PlayerListInfo(), this);
+        getServer().getPluginManager().registerEvents(new NetherTunnelSpawnBlocker(), this);
 
         // Register all commands
         TPACommand tpacommand = new TPACommand();
