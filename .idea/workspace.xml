@@ -7,9 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caf2ce58-3269-44db-8a21-e6b876a6f6a0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/mauldin/mc/SSU/listeners/NetherTunnelSpawnBlocker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/mauldin/mc/SSU/SSU.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/mauldin/mc/SSU/SSU.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/mauldin/mc/SSU/listeners/NetherTunnelSpawnBlocker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/mauldin/mc/SSU/listeners/NetherTunnelSpawnBlocker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
